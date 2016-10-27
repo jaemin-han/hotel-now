@@ -13,3 +13,6 @@
   <% }) %>
   <a href="/">Search Again</a> -->
 
+<!-- 
+<li>Check_in: <%# hotels[i].check_in %></li>
+<li>Check_out: <%# hotels[i].check_out %></li> -->
