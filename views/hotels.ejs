@@ -7,11 +7,20 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
-  <h1>This is Your Hotels Page</h1>
+  <h1>Find Your Airport Hotel Now!</h1>
 
-  <h1><%= hotels.property_name %></h1>
-  <div>address: <%= hotels.address %></div>
+    <ul class="hotels">
+      <%# for (let i = 0; i < hotels.length; i++) { %>
+      <li class = 'hotel-item'>
+        <h4>Airport Hotel Location: <%# hotels[0].property_name %></h4>
+        <h4>Check_in: <%# hotels[i].check_in %></h4>
+        <h4>Check_out: <%# hotels[i].check_out %></h4>
+      </li>
+      <%# }; %>
+    </ul>
   <a href="/">Search Again</a>
+
+
 
 </body>
 </html>

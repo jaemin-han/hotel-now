@@ -1,4 +1,5 @@
-require('dotenv').config();
+
+const  dotenv = require('dotenv').config();
 
 const express = require('express');
 const logger = require('morgan');
@@ -13,9 +14,8 @@ const app = express();
 const PORT = process.argv[2] || process.env.PORT || 3000;
 
 // sets logging so that we can see what's happening
+// and sets static assets path - my styling
 app.use(logger('dev'));
-
-// sets static assets path - my styling
 app.use(express.static('./public'));
 
 // sets default templating engine

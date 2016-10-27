@@ -1,17 +1,15 @@
-<!-- # hotel-now
+# hotel-now
 
-    <% results.forEach(function(x) { %>
-    <div class="hotel_list">
+<!--   <% hotels.forEach(function(x) { %>
+    <div class="hotel">
       <div>Results:
       <ul>
-        <li>Hotel Name: <%= x.property_name %></li>
-        <li>Address: <%= x.address %></li>
+        <li>Hotel Location: <%= x.location %></li>
+        <li>Check-in: <%= x.check_in %></li>
+        <li>Check-out: <%= x.check_out %></li>
       </ul>
       </div>
     </div>
   <% }) %>
- -->
+  <a href="/">Search Again</a> -->
 
-<!-- { status: 401,
-  message: 'Invalid or missing API key',
-  more_info: 'A valid API key is required to access this resource. Please ensure your request includes a query parameter called apikey, whose value is a valid API key from your account at https://sandbox.amadeus.com' } -->
