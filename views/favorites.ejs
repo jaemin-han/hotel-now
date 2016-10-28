@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Selected Hotels</h1>
+
+        <div class="container">
+        <ul class="favorites">
+          <% for (let i=0; i < savedHotels.length; i++) { %>
+          <li class ='movie-item'>
+          <h4><%= savedHotels[i].property_name %></h4>
+          <h4><%= savedHotels[i]..rooms[0].rates[0].price %></h4>
+            <form class='delete-favorites' action='/hotels/favorites/<%= savedHotels[i]._id %>?_method=DELETE' method='post'>
+            <input type='submit' value='Delete'>
+            </form>
+          </li>
+          <% }; %>
+        </ul>
+      </div>
+
+</body>
+</html>

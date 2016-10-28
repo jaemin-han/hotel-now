@@ -4,10 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Hotels Page</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <h1>Find Your Airport Hotel Now!</h1>
+
+    <a href="/">Search Again</a>
 
   <% for (let i = 0; i < hotels.length; i++) { %>
     <ul class="hotels">
@@ -16,8 +19,15 @@
         <li>Your Rate per : $<%= hotels[i].rooms[0].rates[0].price %> USD</li>
       </li>
     </ul>
+
+  <form class='save-favorites' action='/hotels/favorites' method='post'>
+    <input type='hidden' name='favoritehotels[property_name]' value='<%= hotels[i].property_name %>'>
+    <input type='hidden' name='favoritehotels[price]' value='<%= hotels[i].rooms[0].rates[0].price %>'>
+
+    <input type='submit' value='save'>
+  </form>
+
   <% }; %>
 
-  <a href="/">Search Again</a>
 </body>
 </html>
