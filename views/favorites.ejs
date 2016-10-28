@@ -16,7 +16,7 @@
         <% for (let i=0; i < savedHotels.length; i++) { %>
         <li class ='movie-item'>
         <h4><%= savedHotels[i].property_name %></h4>
-        <h4><%= savedHotels[i].rooms[0].rates[0].price %></h4>
+        <h4><%= savedHotels[i].price %></h4>
           <form class='delete-favorites' action='/hotels/favorites/<%= savedHotels[i]._id %>?_method=DELETE' method='post'>
           <input type='submit' value='Delete'>
           </form>

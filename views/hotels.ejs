@@ -20,14 +20,11 @@
         <li>Your Rate per : $<%= hotels[i].rooms[0].rates[0].price %> USD</li>
       </li>
     </ul>
-
   <form class='save-favorites' action='/hotels/favorites' method='post'>
     <input type='hidden' name='favoritehotels[property_name]' value='<%= hotels[i].property_name %>'>
     <input type='hidden' name='favoritehotels[price]' value='<%= hotels[i].rooms[0].rates[0].price %>'>
-
     <input type='submit' value='save'>
   </form>
-
   <% }; %>
 
   <script src="http://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>

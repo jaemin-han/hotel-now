@@ -16,4 +16,3 @@ router.delete('/:id', deleteFavoriteHotels, (req, res) => {
 });
 
 module.exports = router;
-

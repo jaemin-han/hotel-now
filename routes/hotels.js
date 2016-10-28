@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { findHotel } = require('../services/hotels');
-const { saveFavoriteHotels } = require('../models/favoritesDB');
+const fav = require('../models/favoritesDB');
 
 // const dbService = require('../models/favoritesDB');
 // const methodOverride = require('method-override');
@@ -18,10 +18,15 @@ router.get('/', findHotel, (req, res) => {
   });
 });
 
-router.post('/favorites', saveFavoriteHotels, (req, res) => {
+router.post('/favorites', fav.saveFavoriteHotels, (req, res) => {
   res.redirect('./favorites');
 });
 
+router.get('/favorites', fav.getFavoriteHotels, (req, res) => {
+  // console.log(res.gotHotels);
+  res.render('favorites', {
+    savedHotels: res.gotHotels,
+  });
+});
 
 module.exports = router;
-
