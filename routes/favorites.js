@@ -12,7 +12,7 @@ router.get('/', getFavoriteHotels, (req, res) => {
 });
 
 router.delete('/:id', deleteFavoriteHotels, (req, res) => {
-  res.redirect('/hotels/favorites');
+  res.redirect('./favorites');
 });
 
 module.exports = router;
