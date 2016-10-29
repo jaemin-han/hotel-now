@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { authenticate } = require('../lib/auth');
 const { findHotel } = require('../services/hotels');
-const { saveFavoriteHotels, getFavoriteHotels } = require('../models/favoritesDB');
+const { saveFavoriteHotels, getFavoriteHotels, editFavoriteHotel } = require('../models/favoritesDB');
 // const fav = require('../models/favoritesDB');
 const methodOverride = require('method-override');
 
@@ -23,6 +23,18 @@ router.get('/', authenticate, findHotel, (req, res) => {
   });
 });
 
+// edit hotel title
+router.get('/edit/:id', findHotel, (req, res) => {
+  res.render('./edit', {
+    hotel: res.updatedHotels,
+  });
+});
+
+router.put('/:id', editFavoriteHotel, (req, res) => {
+  res.render('./hotels');
+});
+
+// save favorite hotel data to the 3rd page with user id
 router.post('/favorites', authenticate, saveFavoriteHotels, (req, res) => {
   res.redirect('./favorites');
 });

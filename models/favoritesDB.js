@@ -52,9 +52,9 @@ function saveFavoriteHotels(req, res, next) {
 function deleteFavoriteHotels(req, res, next) {
   getDB().then((db) => {
     db.collection('favoritehotels')
-    .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, result) => {
+    .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, doc) => {
       if (removeErr) return next(removeErr);
-      res.removedHotels = result;
+      res.removedHotels = doc;
       db.close();
       next();
     });
@@ -63,9 +63,26 @@ function deleteFavoriteHotels(req, res, next) {
   return false;
 }
 
+function editFavoriteHotel(req, res, next) {
+  getDB().then((db) => {
+    db.collection('favoritehotels')
+    .findAndModify({ _id: ObjectID(req.params.id) }, [] /* sort */,
+      { $set: req.body.hotel }, { new: true }, (updateError, doc) => {
+        if (updateError) return next(updateError);
+
+      // return the data
+      res.updatedHotels = doc;
+        db.close();
+        next();
+      });
+    return false;
+  });
+  return false;
+}
 
 module.exports = {
   getFavoriteHotels,
   saveFavoriteHotels,
   deleteFavoriteHotels,
+  editFavoriteHotel,
 };

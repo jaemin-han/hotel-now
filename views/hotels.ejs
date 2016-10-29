@@ -20,6 +20,7 @@
         <li>Your Rate per : $<%= hotels[i].rooms[0].rates[0].price %> USD</li>
       </li>
     </ul>
+    <a href="/edit/<%= hotels[i]._id %>">Add Comment</a>
   <form class='save-favorites' action='/hotels/favorites' method='post'>
     <input type='hidden' name='favoritehotels[property_name]' value='<%= hotels[i].property_name %>'>
     <input type='hidden' name='favoritehotels[price]' value='<%= hotels[i].rooms[0].rates[0].price %>'>
