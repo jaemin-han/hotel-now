@@ -11,14 +11,16 @@
 <body>
   <h1>Selected Hotels</h1>
 
+<!-- <a href="/hotels">Go back to Hotel List</a> -->
+
     <div class="container">
       <ul class="favorites">
         <% for (let i=0; i < savedHotels.length; i++) { %>
         <li class ='movie-item'>
         <h4><%= savedHotels[i].property_name %></h4>
-        <h4><%= savedHotels[i].price %></h4>
-          <form class='delete-favorites' action='/hotels/favorites/<%= savedHotels[i]._id %>?_method=DELETE' method='post'>
-          <input type='submit' value='Delete'>
+        <h4>$ <%= savedHotels[i].price %> USD</h4>
+          <form class="delete-favorites" action="/hotels/favorites/<%= savedHotels[i]._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
           </form>
         </li>
         <% }; %>

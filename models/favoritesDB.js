@@ -1,58 +1,68 @@
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 const { ObjectID } = require('mongodb');
-const dbConnection = 'mongodb://localhost:27017/hotels';
+const { getDB } = require('../lib/dbConnect.js');
+
+// const dbConnection = 'mongodb://localhost:27017/hotels';
 
 function getFavoriteHotels(req, res, next) {
-  MongoClient.connect(dbConnection, (err, db) => {
-    if (err) return next(err);
-
+  // find all favorites for your userId
+  getDB().then((db) => {
     db.collection('favoritehotels')
-    .find({})
-    .toArray((insertErr, gethotel) => {
-      if (insertErr) return next(insertErr);
-
-      res.gotHotels = gethotel;
-      db.close();
-      return next();
-    });
+      .find({ userId: { $eq: req.session.userId } })
+      .toArray((toArrErr, gethotel) => {
+        if (toArrErr) return next(toArrErr);
+        res.gotHotels = gethotel;
+        db.close();
+        next();
+      });
     return false;
   });
   return false;
 }
 
 function saveFavoriteHotels(req, res, next) {
-  MongoClient.connect(dbConnection, (err, db) => {
-    if (err) return next(err);
+  // creating an empty object for the insertObj
+  const insertObj = {};
 
+  // copying all of req.body into insertObj
+  for(key in req.body) {
+    insertObj[key] = req.body[key];
+  }
+
+  // Adding userId to insertObj
+  insertObj.favoritehotels.userId = req.session.userId;
+
+  getDB().then((db) => {
     db.collection('favoritehotels')
-    .insert(req.body.favoritehotels, (insertErr, hotelresult) => {
-      if (insertErr) return next(insertErr);
-
-      res.savedHotels = hotelresult;
-      db.close();
-      return next();
-    });
+      .insert(insertObj.favoritehotels, (insertErr, hotelresult) => {
+        if (insertErr) return next(insertErr);
+        res.savedHotels = hotelresult;
+        db.close();
+        next();
+      });
     return false;
   });
   return false;
 }
 
+
+// Delete method doesn't change because we are deleting objects from the database
+// based on that object's unique _id - you do not need to specify which user as
+// the _id is sufficient enough
 function deleteFavoriteHotels(req, res, next) {
-  MongoClient.connect(dbConnection, (err, db) => {
-    if (err) return next(err);
-
+  getDB().then((db) => {
     db.collection('favoritehotels')
-    .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, doc) => {
+    .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, result) => {
       if (removeErr) return next(removeErr);
-
-      res.removedHotels = doc;
+      res.removedHotels = result;
       db.close();
-      return next();
+      next();
     });
     return false;
   });
   return false;
 }
+
 
 module.exports = {
   getFavoriteHotels,
