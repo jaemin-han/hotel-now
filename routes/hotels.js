@@ -12,7 +12,7 @@ router.use(methodOverride('_method'));
 
 // router.use(methodOverride('_method'));
 
-
+// finds all hotels near selected airport
 router.get('/', authenticate, findHotel, (req, res) => {
   // console.log(res.hotels);
   res.render('./hotels', {
