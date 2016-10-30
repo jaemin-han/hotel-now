@@ -234,7 +234,7 @@ input[type="submit"]:link {
 #mainleft h1 {
   font-size: 36px;
   color: Tomato;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 #main-container input[type="submit"] {
@@ -292,9 +292,13 @@ input[type="submit"]:link {
   font-style: italic;
 }
 
-#marketing {
+.marketing {
   margin: 8% 0 0 30%;
   color: white;
+}
+
+.marketing span {
+  color: tomato;
 }
 
 /*Modal popup - IATA code*/
@@ -343,5 +347,96 @@ input[type="submit"]:link {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*hotels.ejs page styling*/
+.logo h1 {
+  color: tomato;
+  margin-left: 20px;
+  font-size: 36px;
+}
+
+.full-container h2 {
+  margin-left: 250px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li span {
+  color: tomato;
+}
+
+.hotel-list {
+  height: 200px;
+  width: 800px;
+  border: 1px solid black;
+  margin: 70px 0;
+  float: left;
+
+}
+
+.split {
+  width: 75%;
+  float: left;
+}
+
+.split1 {
+  width: 25%;
+  float: left;
+  margin-top: 30px;
+}
+
+.split1 a {
+  font-size: 12px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.split1 h3 {
+  margin: 0 auto;
+}
+
+.split1 span {
+  color: tomato;
+}
+
+.hotels {
+  margin-top: 30px;
+}
+
+.split a {
+  margin-left: 40px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.flex-container {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.marketing2 {
+  margin: 3% 0 0 20%;
+  color: black;
+}
+
+.marketing2 span {
+  text-decoration: underline;
+  color: tomato;
+}
+
+
+
+
+
 
 
