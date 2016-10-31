@@ -21,22 +21,22 @@ From the profile page, a user can enter an airport IATA code (already provided a
 #Wireframe
 
 Register/Log In
-![](/image/login.png)
+![](/public/image/login.png)
 
 Sign Up
-![](/image/signup.png)
+![](/public/image/signup.png)
 
 User Log In
-![](/image/userlogin.png)
+![](/public/image/userlogin.png)
 
 User Profile/Hotel Search 
-![](/image/profile.png)
+![](/public/image/profile.png)
 
 Hotel Lists
-![](/image/reallogin.png)
+![](/public/image/new.png)
 
 User's Favorite Hotels
-![](/image/favorites.png)
+![](/public/image/new1.png)
 
 #Technologies Used
 - API: https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport
@@ -49,5 +49,5 @@ User's Favorite Hotels
 #Hurdles
 1. Setting up my files in MVC while connecting my API
 2. Implementing user login authentication in my project
-3. Emphasizing UX throughout my project
+3. Emphasizing userflow throughout my project
 
