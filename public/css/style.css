@@ -443,9 +443,17 @@ ul li span {
   width: 63%;
   height: 180px;
   margin: 0 auto;
-  background-color: white;
+/*  background-color: white;
   border: 1px solid black;
-  background: rgba(255, 255, 255, .9);
+  background: rgba(255, 255, 255, .9);*/
+}
+
+.marketing2 h2 {
+  color: white;
+}
+
+.marketing3 a {
+  color: white;
 }
 
 .marketing-box .marketing2 {
@@ -453,3 +461,36 @@ ul li span {
   padding-left: 20px;
 }
 
+/*favorites.ejs page styling*/
+.favorite-list {
+  height: 120px;
+  width: 600px;
+  border: 1px solid black;
+  margin: 40px 0;
+  float: left;
+  background: rgba(255, 255, 255, .8);
+}
+
+.split1 a {
+  margin-bottom: 5px;
+}
+
+.marketing3 h2 {
+  color: black;
+  margin: 50px;
+  color: white;
+  text-align: center
+}
+
+.marketing3 span {
+  text-decoration: underline;
+  color: tomato;
+}
+
+.split1 h3 {
+  font-size: 16px;
+}
+
+.split1 form {
+  margin-top: 10px;
+}

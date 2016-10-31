@@ -20,7 +20,7 @@
       </div>
 
       <div class="marketing3">
-        <a href="/users/profile">Search Again</a>
+        <a href="/users/profile">Back to Search</a>
       </div>
     </div>
 
@@ -43,6 +43,7 @@
           <form class='save-favorites' action='/hotels/favorites' method='post'>
             <input type='hidden' name='favoritehotels[property_name]' value='<%= hotels[i].property_name %>'>
             <input type='hidden' name='favoritehotels[price]' value='<%= hotels[i].rooms[0].rates[0].price %>'>
+            <input type='hidden' name='favoritehotels[phone]' value='<%= hotels[i].contacts[0].detail %>'>
             <input type='submit' value='save'>
           </form>
         </div>
