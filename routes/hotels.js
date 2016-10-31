@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { authenticate } = require('../lib/auth');
 const { findHotel } = require('../services/hotels');
-const { saveFavoriteHotels, getFavoriteHotels, editFavoriteHotel } = require('../models/favoritesDB');
+const { saveFavoriteHotels, getFavoriteHotels, editFavoriteHotel, deleteFavoriteHotels } = require('../models/favoritesDB');
 const methodOverride = require('method-override');
 
 router.use(methodOverride('_method'));
@@ -39,6 +39,11 @@ router.get('/favorites', authenticate, getFavoriteHotels, (req, res) => {
   res.render('favorites', {
     savedHotels: res.gotHotels,
   });
+});
+
+// Based on users preference - can delete saved/favorite items
+router.delete('/favorites/:id', deleteFavoriteHotels, (req, res) => {
+  res.redirect('/favorites');
 });
 
 module.exports = router;

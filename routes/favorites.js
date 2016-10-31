@@ -10,10 +10,10 @@ router.get('/', getFavoriteHotels, (req, res) => {
   });
 });
 
-// Based on users preference - can delete saved/favorite items
-router.delete('/hotels/favorites/:id', deleteFavoriteHotels, (req, res) => {
-  res.redirect('./favorites');
-});
+// // Based on users preference - can delete saved/favorite items
+// router.delete('/:id', deleteFavoriteHotels, (req, res) => {
+//   res.redirect('./favorites');
+// });
 
 
 // Testing delete with above section
