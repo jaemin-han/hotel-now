@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <form class="edit" action="/hotels/<%= hotel._id %>?_method=PUT" method="POST">
+  <form class="edit" action="/hotels/favorites/<%= hotel._id %>?_method=PUT" method="POST">
     <input type="text" name='hotel[property_name]' value="<%= hotel.property_name %>">
     <input type="submit" value="Update">
   </form>

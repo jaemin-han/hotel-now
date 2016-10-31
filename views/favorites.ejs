@@ -22,10 +22,12 @@
       <div class="favorite-list">
         <div class="split">
           <ul class="hotels">
-            <li><%= savedHotels[i].property_name %></li><br>
-            <li>Book Direct: <%= savedHotels[i].phone %></li>
+            <li><span><%= savedHotels[i].property_name %></span></li><br>
+            <li>Book Direct: <%= savedHotels[i].phone %></li><br>
+            <li><a href="/hotels/favorites/edit/<%= savedHotels[i]._id %>">Add Comments</a></li>
           </ul>
         </div>
+
       <div class="split1">
         <h3><span>$ <%= savedHotels[i].price %></span> USD</h3>
         <form class="delete-favorites" action="/hotels/favorites/<%= savedHotels[i]._id %>?_method=DELETE" method="POST">

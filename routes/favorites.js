@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getFavoriteHotels, deleteFavoriteHotels } = require('../models/favoritesDB');
+const { getFavoriteHotels, getEditHotel, editFavoriteHotel } = require('../models/favoritesDB');
 const methodOverride = require('method-override');
 router.use(methodOverride('_method'));
 
