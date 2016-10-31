@@ -31,10 +31,10 @@
         <div class="split">
           <ul class="hotels">
             <li><span><%= hotels[i].property_name %></span></li>
-            <li>Address: <%= hotels[i].address.line1 %>, <%= hotels[i].address.city %>, <%= hotels[i].address.region %> <%= hotels[i].address.postal_code %></li>
-            <li>Contact US: <%= hotels[i].contacts[0].detail %></li>
-            <li>Room Type: <%= hotels[i].rooms[0].room_type_info.room_type %></li>
-            <li>Hotel Description: <br>
+            <li><span1>Address:</span1> <%= hotels[i].address.line1 %>, <%= hotels[i].address.city %>, <%= hotels[i].address.region %> <%= hotels[i].address.postal_code %></li>
+            <li><span1>Contact US:</span1> <%= hotels[i].contacts[0].detail %></li>
+            <li><span1>Room Type:</span1> <%= hotels[i].rooms[0].room_type_info.room_type %></li>
+            <li><span1>Hotel Description:</span1> <br>
             - <%= hotels[i].rooms[0].descriptions[0] %> <br>
             - <%= hotels[i].rooms[0].descriptions[1]%></li>
           </ul>
