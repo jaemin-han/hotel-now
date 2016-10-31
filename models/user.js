@@ -1,4 +1,4 @@
-// User login provided by GA and implementation based on my project setup
+// User login model was provided by GA WDI and implementation based on my project setup
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 /* eslint no-param-reassign: ["error", { "props": false }] */
 

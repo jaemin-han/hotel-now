@@ -4,6 +4,7 @@ const { getDB } = require('../lib/dbConnect.js');
 
 // const dbConnection = 'mongodb://localhost:27017/hotels';
 
+// Get all hotel List
 function getFavoriteHotels(req, res, next) {
   // Find all favorites for your userId
   getDB().then((db) => {
@@ -20,6 +21,7 @@ function getFavoriteHotels(req, res, next) {
   return false;
 }
 
+// Saving all favorite hotel list
 function saveFavoriteHotels(req, res, next) {
   // Creating an empty object for the insertObj
   const insertObj = {};
@@ -45,7 +47,6 @@ function saveFavoriteHotels(req, res, next) {
   return false;
 }
 
-
 // Delete method doesn't change because we are deleting objects from the database
 // based on that object's unique _id - you do not need to specify which user as
 // the _id is sufficient enough
@@ -63,6 +64,7 @@ function deleteFavoriteHotels(req, res, next) {
   return false;
 }
 
+// Edit user's saved items
 function editFavoriteHotel(req, res, next) {
   getDB().then((db) => {
     db.collection('favoritehotels')

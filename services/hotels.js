@@ -1,3 +1,4 @@
+// API data pulled from https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport
 const fetch = require('node-fetch');
 
 const API_URL = 'https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?';

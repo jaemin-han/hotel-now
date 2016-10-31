@@ -45,6 +45,8 @@ User's Favorite Hotels
 - Javascript
 - HTML/CSS
 - EJS
+- Heroku
+- MongoDB
 
 #Hurdles
 1. Setting up my files in MVC while connecting my API
