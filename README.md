@@ -21,20 +21,20 @@ From the profile page, a user can enter an airport IATA code (already provided a
 #Wireframe
 
 Register/Log In
-![](../../image/login.png)
+![](/image/login.png)
 
 Sign Up
-![](../../image/signup.png)
+![](/image/signup.png)
 
 User Log In
-![](../../image/userlogin.png)
+![](/image/userlogin.png)
 
 User Profile/Hotel Search 
-![](../../image/profile.png)
+![](/image/profile.png)
 
 Hotel Lists
-![](../../image/reallogin.png)
+![](/image/reallogin.png)
 
 User's Favorite Hotels
-![](../../image/favorites.png)
+![](/image/favorites.png)
 
