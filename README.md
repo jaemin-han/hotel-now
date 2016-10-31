@@ -50,4 +50,5 @@ User's Favorite Hotels
 1. Setting up my files in MVC while connecting my API
 2. Implementing user login authentication in my project
 3. Emphasizing UX throughout my project
+=======
 
