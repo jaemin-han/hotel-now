@@ -373,7 +373,7 @@ ul li span {
   border: 1px solid black;
   margin: 70px 0;
   float: left;
-
+  background: rgba(255, 255, 255, .9);
 }
 
 .split {
@@ -434,9 +434,22 @@ ul li span {
   color: tomato;
 }
 
+.marketing3 a {
+  margin-left: 80%;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
 
+.marketing-box {
+  width: 63%;
+  height: 180px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, .9);
+}
 
-
-
-
+.marketing-box .marketing2 {
+  margin: 0 auto;
+  padding-left: 20px;
+}
 
