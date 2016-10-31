@@ -18,4 +18,23 @@ From the profile page, a user can enter an airport IATA code (already provided a
 6) Utilize a database (MongoDB)
 7) Style based on Wireframes
 
+#Wireframe
+
+Register/Log In
+![](../../image/login.png)
+
+Sign Up
+![](../../image/signup.png)
+
+User Log In
+![](../../image/userlogin.png)
+
+User Profile/Hotel Search 
+![](../../image/profile.png)
+
+Hotel Lists
+![](../../image/reallogin.png)
+
+User's Favorite Hotels
+![](../../image/favorites.png)
 
