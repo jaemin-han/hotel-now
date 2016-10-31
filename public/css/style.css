@@ -498,3 +498,28 @@ ul li span1 {
 .split1 form {
   margin-top: 10px;
 }
+
+/*edit.ejs page styling */
+.edit-hotel {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  letter-spacing: 2px;
+  border: 1px solid white;
+  width: 500px;
+  height: 200px;
+  position: relative;
+  background: rgba(0, 0, 0, .4);
+  margin: 0 auto;
+}
+
+.edit-hotel h1 {
+  color: white;
+}
+
+.edit-hotel h2 {
+  color: white;
+}
+
+.edit-hotel input[type="text"] {
+  width: 200px;
+}

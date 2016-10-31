@@ -4,14 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Edit Hotel Title</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
 </head>
-<body>
+<body style="background-image: url(../../../image/hotel2.jpg);">
 
+  <div class="logo">
+    <h1>Hotel Now</h1>
+  </div>
+  <div class="edit-hotel">
+  <h1>Edit Hotel Information</h1>
   <form class="edit" action="/hotels/favorites/<%= hotel._id %>?_method=PUT" method="POST">
     <input type="text" name='hotel[property_name]' value="<%= hotel.property_name %>">
     <input type="submit" value="Update">
   </form>
   <h2>Book Direct: <%= hotel.phone %></h2>
+  </div>
 </body>
 </html>
