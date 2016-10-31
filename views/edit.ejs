@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
+
   <h2>Hotel Name: <%= hotel[i].property_name %></h2>
   <h2>Address: <%= hotel[i].address.line1 %></h2>
-    <form class="edit" action="/<%= hotel._id %>?_method=PUT" method="POST">
-      <input type="text" name='hotel[property_name]' value="<%= hotel.Title %>">
-      <input type="submit" value="Update">
-    </form>
+  <form class="edit" action="/<%= hotel._id %>?_method=PUT" method="POST">
+    <input type="text" name='hotel[property_name]' value="<%= hotel.Title %>">
+    <input type="submit" value="Update">
+  </form>
 
 </body>
 </html>

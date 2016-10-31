@@ -1,11 +1,6 @@
 console.log('Connected');
 
-// document.addEventListener('DOMContentLoaded', function() {
-// $(document).ready(function() {
-
-// });
-// });
-
+// Javascript created for my Modal Popup on hotel search page
 const modal = document.getElementById('myModal');
 const btn = document.getElementById('myBtn');
 const span = document.getElementsByClassName('close')[0];

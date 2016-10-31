@@ -1,7 +1,5 @@
 const router = require('express').Router();
 
-// const indexRouter = express.Router();
-
 // This is the route that serves your '/' homepage
 router.get('/', (req, res) => {
   res.render('index');

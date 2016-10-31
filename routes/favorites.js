@@ -1,21 +1,16 @@
 const router = require('express').Router();
 const { getFavoriteHotels, deleteFavoriteHotels } = require('../models/favoritesDB');
-// const fav = require('../models/favoritesDB');
 const methodOverride = require('method-override');
-
 router.use(methodOverride('_method'));
-// const dbService = require('../models/favoritesDB');
-// const methodOverride = require('method-override');
 
-// router.use(methodOverride('_method'));
-
-
+// Based on users favorites - stores all data on the favorites page
 router.get('/', getFavoriteHotels, (req, res) => {
   res.render('./favorites', {
     savedHotels: res.gotHotels,
   });
 });
 
+// Based on users preference - can delete saved/favorite items
 router.delete('/hotels/favorites/:id', deleteFavoriteHotels, (req, res) => {
   res.redirect('./favorites');
 });

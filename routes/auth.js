@@ -1,9 +1,6 @@
 const router = require('express').Router();
 const { logIn } = require('../lib/auth');
 
-// Router
-// const authRouter = express.Router();
-
 /**
  * Log In and if successful assign res.user._id to the session
  * It uses the logIn middleware from the auth library to parse the form inputs

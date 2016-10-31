@@ -5,7 +5,7 @@ const { getDB } = require('../lib/dbConnect.js');
 // const dbConnection = 'mongodb://localhost:27017/hotels';
 
 function getFavoriteHotels(req, res, next) {
-  // find all favorites for your userId
+  // Find all favorites for your userId
   getDB().then((db) => {
     db.collection('favoritehotels')
       .find({ userId: { $eq: req.session.userId } })
@@ -21,10 +21,10 @@ function getFavoriteHotels(req, res, next) {
 }
 
 function saveFavoriteHotels(req, res, next) {
-  // creating an empty object for the insertObj
+  // Creating an empty object for the insertObj
   const insertObj = {};
 
-  // copying all of req.body into insertObj
+  // Copying all of req.body into insertObj
   for(key in req.body) {
     insertObj[key] = req.body[key];
   }
@@ -80,6 +80,7 @@ function editFavoriteHotel(req, res, next) {
   return false;
 }
 
+// Modules called in various routes
 module.exports = {
   getFavoriteHotels,
   saveFavoriteHotels,
