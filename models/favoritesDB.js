@@ -80,10 +80,27 @@ function editFavoriteHotel(req, res, next) {
   return false;
 }
 
+function getEditHotel(req, res, next) {
+  getDB().then((db) => {
+    db.collection('favoritehotels')
+      .findOne({ _id: ObjectID(req.params.id) }, (findErr, hotel) => {
+        if (findErr) return next(findErr);
+
+        // return the data
+        res.hotel = hotel;
+        db.close();
+        return next();
+      });
+    return false;
+  });
+  return false;
+}
+
 // Modules called in various routes
 module.exports = {
   getFavoriteHotels,
   saveFavoriteHotels,
   deleteFavoriteHotels,
   editFavoriteHotel,
+  getEditHotel,
 };

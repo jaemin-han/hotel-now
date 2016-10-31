@@ -33,8 +33,10 @@
             <li><span><%= hotels[i].property_name %></span></li>
             <li>Address: <%= hotels[i].address.line1 %>, <%= hotels[i].address.city %>, <%= hotels[i].address.region %> <%= hotels[i].address.postal_code %></li>
             <li>Contact US: <%= hotels[i].contacts[0].detail %></li>
-            <li>Room Type: <%# hotels[i].rooms[0].room_type_info[0].room_type %></li>
-            <li>Hotel Description: <%# hotels[i].rooms[1].descriptions[0] %></li>
+            <li>Room Type: <%= hotels[i].rooms[0].room_type_info.room_type %></li>
+            <li>Hotel Description: <br>
+            - <%= hotels[i].rooms[0].descriptions[0] %> <br>
+            - <%= hotels[i].rooms[0].descriptions[1]%></li>
           </ul>
           <a href="/edit/<%= hotels[i]._id %>">Add Comments</a>
         </div>

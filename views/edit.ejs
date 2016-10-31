@@ -8,12 +8,10 @@
 </head>
 <body>
 
-  <h2>Hotel Name: <%= hotel[i].property_name %></h2>
-  <h2>Address: <%= hotel[i].address.line1 %></h2>
-  <form class="edit" action="/<%= hotel._id %>?_method=PUT" method="POST">
-    <input type="text" name='hotel[property_name]' value="<%= hotel.Title %>">
+  <form class="edit" action="/hotels/<%= hotel._id %>?_method=PUT" method="POST">
+    <input type="text" name='hotel[property_name]' value="<%= hotel.property_name %>">
     <input type="submit" value="Update">
   </form>
-
+  <h2>Book Direct: <%= hotel.phone %></h2>
 </body>
 </html>
