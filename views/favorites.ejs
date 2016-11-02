@@ -10,12 +10,31 @@
 </head>
 <body style="background-image: url(../../image/hotel3.jpg);">
 
-  <div class="logo">
+<div class="main-container1">
+  <div class="mainleft1">
     <h1>Hotel Now</h1>
   </div>
-  <div class="marketing3">
-    <h2><span>Selected</span> Airport Hotels for Price Comparison.</h2>
+
+  <div class="maincenter1">
+    <h2>Welcome, <%# user.username %>!</h2>
   </div>
+
+  <div class="mainright1" class="logout">
+    <form action="/auth?_method=DELETE" method="post">
+      <input type="submit" value="Logout">
+    </form>
+  </div>
+</div>
+
+    <div class="marketing-box2">
+      <div class="marketing2.5">
+        <h2><span>Selected</span> Airport Hotels for Price Comparison.</h2>
+      </div>
+
+      <div class="marketing3.5">
+        <a href="/users/profile">Back to Search</a>
+      </div>
+    </div>
 
   <% for (let i=0; i < savedHotels.length; i++) { %>
   <div class="flex-container">
