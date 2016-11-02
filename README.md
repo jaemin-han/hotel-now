@@ -5,6 +5,8 @@ https://jm-hotel-now.herokuapp.com/
 #Summary
 The app finds affordable hotels near airports based on Airport IATA code and check-in & check-out dates.
 
+![](/public/image/flow2.png)
+
 # Use Case
 - New users need to first sign up with a username and password to access this app.
 - Existing users can simply log in to search afforable airport hotels based on their search queries.
@@ -21,6 +23,9 @@ From the profile page, a user can enter an airport IATA code (already provided a
 7. Style based on Wireframes
 
 #Wireframe
+
+User Flow
+![](/public/image/flow1.png)
 
 Register/Log In
 ![](/public/image/login.png)
