@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const { getFavoriteHotels, getEditHotel, editFavoriteHotel } = require('../models/favoritesDB');
+const { authenticate } = require('../lib/auth');
 const methodOverride = require('method-override');
 router.use(methodOverride('_method'));
 
 // Based on users favorites - stores all data on the favorites page
-router.get('/', getFavoriteHotels, (req, res) => {
+router.get('/', authenticate, getFavoriteHotels, (req, res) => {
   res.render('./favorites', {
     savedHotels: res.gotHotels,
   });

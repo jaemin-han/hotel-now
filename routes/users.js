@@ -16,6 +16,8 @@ router.post('/', createUser, (req, res) => {
 // It is "protected" by the authenticate middleware from the auth library
 router.get('/profile', authenticate, (req, res) => {
   res.render('users/profile', { user: res.user });
+  // res.render('./hotels', { user: res.user });
+  // res.render('./favorites', { user: res.user });
 });
 
 
