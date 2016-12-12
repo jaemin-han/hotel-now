@@ -22,6 +22,16 @@ From the profile page, a user can enter an airport IATA code (already provided a
 6. Utilize a database (MongoDB)
 7. Style based on Wireframes
 
+#Technologies Used
+- API: https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport
+- Node
+- Express
+- Javascript
+- HTML/CSS
+- EJS
+- Heroku
+- MongoDB
+
 #Wireframe
 
 User Flow
@@ -45,17 +55,9 @@ Hotel Lists
 User's Favorite Hotels
 ![](/public/image/new1.png)
 
-#Technologies Used
-- API: https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport
-- Node
-- Express
-- Javascript
-- HTML/CSS
-- EJS
-- Heroku
-- MongoDB
 
-#Hurdles
+
+<!-- #Hurdles
 1. Setting up my files in MVC while connecting my API
 2. Implementing user login authentication in my project
-3. Emphasizing userflow throughout my project
+3. Emphasizing userflow throughout my project -->
