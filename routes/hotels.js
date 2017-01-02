@@ -25,10 +25,10 @@ router.get('/favorites/edit/:id', getEditHotel, (req, res) => {
   });
 });
 
+// Update hotel title
 router.put('/favorites/:id', editFavoriteHotel, (req, res) => {
   res.redirect('./');
 });
-
 
 // Save favorite hotel data to the 3rd page with user id
 router.post('/favorites', authenticate, saveFavoriteHotels, (req, res) => {
@@ -42,7 +42,7 @@ router.get('/favorites', authenticate, getFavoriteHotels, (req, res) => {
   });
 });
 
-// Based on users preference - can delete saved/favorite items
+// Based on users preference - can delete saved/favorite items and return
 router.delete('/favorites/:id', deleteFavoriteHotels, (req, res) => {
   res.redirect('/favorites');
 });
