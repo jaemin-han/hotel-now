@@ -6,7 +6,7 @@ const { getDB } = require('../lib/dbConnect.js');
 
 // Get all hotel List
 function getFavoriteHotels(req, res, next) {
-  // Find all favorites for your userId
+  // Find all favorites for your userId and display
   getDB().then((db) => {
     db.collection('favoritehotels')
       .find({ userId: { $eq: req.session.userId } })
@@ -50,6 +50,7 @@ function saveFavoriteHotels(req, res, next) {
 // Delete method doesn't change because we are deleting objects from the database
 // based on that object's unique _id - you do not need to specify which user as
 // the _id is sufficient enough
+// Find and remove the object id
 function deleteFavoriteHotels(req, res, next) {
   getDB().then((db) => {
     db.collection('favoritehotels')
