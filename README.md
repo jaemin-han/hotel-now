@@ -56,8 +56,13 @@ User's Favorite Hotels
 ![](/public/image/new1.png)
 
 
-
-<!-- #Hurdles
-1. Setting up my files in MVC while connecting my API
-2. Implementing user login authentication in my project
-3. Emphasizing userflow throughout my project -->
+#Technologies Used
+- API (Amadeus): https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/hotels/search-airport
+- Node.js
+- Express
+- User Authentication
+- Javascript
+- HTML/CSS
+- EJS
+- MongoDB
+- Heroku
